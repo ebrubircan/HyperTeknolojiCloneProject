@@ -8,12 +8,13 @@
     height: 30px;
     width: 300px;
     padding: 10px;
-    border: 2px solid #ccc;
-    background-color: #d8d8d8b5;
     border-radius: 25px; 
     font-size: 16px;
     outline: none;
     margin-right: 20px;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--input-border-color);
 }
 
 .icon{
@@ -24,3 +25,36 @@
 .icon:hover{
     cursor: pointer;
 }
+
+:root {
+    --background-color: #fff;
+    --text-color: black;
+    --card-bg-color: #f9f9f9;
+    --button-bg-color: #007bff;
+    --button-text-color: white;
+    --button-hover-bg-color: #0056b3;
+  }
+  
+  .dark {
+    --background-color: #121212;
+    --text-color: #b4b4b4;
+    --input-bg-color: #333;
+    --input-border-color: #555;
+    --card-bg-color: #1e1e1e;
+    --button-bg-color: #ff9800;
+    --button-text-color: black;
+    --button-hover-bg-color: #e68900;
+  }
+  
+  .light {
+    --background-color: #fff;
+    --text-color: #656565;
+    --input-bg-color: #fff;
+    --input-border-color: #ccc;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
