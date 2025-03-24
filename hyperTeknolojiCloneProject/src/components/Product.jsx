@@ -1,9 +1,13 @@
 import React from 'react';
 import '../css/Product.css';
+import { useDispatch } from 'react-redux';
+import { addToBasket } from '../redux/slices/basketSlice';
 
 function Product({ product }) {
+  const dispatch = useDispatch();
+
   const handleAddToCart = () => {
-    console.log('Sepete Eklendi:', product.title); 
+    dispatch(addToBasket(product));
   };
 
   return (

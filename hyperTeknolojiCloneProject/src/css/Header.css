@@ -33,9 +33,9 @@
     --button-bg-color: #007bff;
     --button-text-color: white;
     --button-hover-bg-color: #0056b3;
-  }
+}
   
-  .dark {
+.dark {
     --background-color: #121212;
     --text-color: #b4b4b4;
     --input-bg-color: #333;
@@ -44,17 +44,68 @@
     --button-bg-color: #ff9800;
     --button-text-color: black;
     --button-hover-bg-color: #e68900;
-  }
+}
   
-  .light {
+.light {
     --background-color: #fff;
     --text-color: #656565;
     --input-bg-color: #fff;
     --input-border-color: #ccc;
-  }
+}
   
-  body {
+body {
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
+}
+
+.basket-icon-container {
+    position: relative;
+    display: inline-block;
+}
+  
+
+.cart-link {
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+}
+  
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #5b3e84;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.inputArea {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  width: 300px;
+  transition: all 0.3s ease;
+}
+
+.inputArea:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+.dark .inputArea {
+  background-color: #333;
+  color: white;
+  border-color: #555;
+}
+
+.dark .inputArea:focus {
+  border-color: #0066cc;
+}

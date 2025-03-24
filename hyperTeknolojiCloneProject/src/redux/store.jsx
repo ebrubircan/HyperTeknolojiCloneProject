@@ -1,9 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import productReducer from './slices/productSlice'; // productSlice'ı import edin
+import productReducer from './slices/productSlice';
+import basketReducer from './slices/basketSlice';
+import searchSlice  from './slices/searhSlice';
 
 export const store = configureStore({
   reducer: {
-    product: productReducer, // productReducer'ı ekleyin
+    product: productReducer,
+    basket: basketReducer,
+    search: searchSlice,
   },
 });
 
